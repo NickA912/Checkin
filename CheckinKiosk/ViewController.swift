@@ -11,18 +11,27 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var GuestCheckinButtonOutlet: NSButton!
-    
+    var keyIsDown=false
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test")
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (aEvent) -> NSEvent? in
+            self.keyDown(with: aEvent)
+            return aEvent
+        }
 
         // Do any additional setup after loading the view.
     }
     
-    override func keyDown(with event: NSEvent)
-    {
-        super.keyDown(with: event)
-        print("Key with number: \(event.keyCode) was pressed")
+    override func keyDown(with event: NSEvent) {
+       if keyIsDown == true {
+           return
+       }
+       keyIsDown = true
+       if event.keyCode == 1 {
+           print("s key pressed")
+       } else if event.keyCode == 49 {
+           print("spacebar pressed")
+       }
     }
 
     override var representedObject: Any? {
