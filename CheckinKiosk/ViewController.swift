@@ -11,29 +11,40 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var GuestCheckinButtonOutlet: NSButton!
+    
     var keyIsDown=false
+    var loginData=""
+    var timer=Timer()
+    var userID=""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (aEvent) -> NSEvent? in
-            self.keyDown(with: aEvent)
-            return aEvent
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            if self.myKeyDown(with: $0) {
+                return nil
+            } else {
+                return $0
+            }
         }
 
         // Do any additional setup after loading the view.
     }
     
-    override func keyDown(with event: NSEvent) {
-       if keyIsDown == true {
-           return
-       }
-       keyIsDown = true
-       if event.keyCode == 1 {
-           print("s key pressed")
-       } else if event.keyCode == 49 {
-           print("spacebar pressed")
-       }
+    func myKeyDown(with event: NSEvent) -> Bool {
+        timer.invalidate()
+        timer=Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerAction), userInfo: nil, repeats:true)
+        loginData+=event.characters!
+        if (event.keyCode==36 && loginData.count==11) {
+            print("Logged In")
+        }
+        return false
     }
 
+    @objc func timerAction() {
+        timer.invalidate()
+        loginData=""
+    }
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
