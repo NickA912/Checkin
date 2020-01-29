@@ -14,7 +14,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        //dataHandler.addTestUsers()
+        //dataHandler.saveUsers()
+        dataHandler.loadUsers()
+        dataHandler.printUsers()
+        
+        //dataHandler.addTestLogs()
+        //dataHandler.saveLogs()
+        dataHandler.loadLogs()
+        dataHandler.printLogs()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

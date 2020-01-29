@@ -730,6 +730,80 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--UserCreation-->
+        <scene sceneID="gBl-LS-D5w">
+            <objects>
+                <viewController title="UserCreation" identifier="UserCreation" storyboardIdentifier="UserCreation" id="xQg-Jp-I64" customClass="UserCreation" customModule="CheckinKiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="0DY-Tz-Hik">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-nb-qGE">
+                                <rect key="frame" x="63" y="187" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="First Name" drawsBackground="YES" id="3p6-0Z-JGh">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c01-p2-Oag">
+                                <rect key="frame" x="186" y="187" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Last Name" drawsBackground="YES" id="1PI-3Z-T3c">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-Ww-1Lk">
+                                <rect key="frame" x="312" y="187" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Computing ID" drawsBackground="YES" id="ORW-jv-xqz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pg-Bv-uy4">
+                                <rect key="frame" x="97" y="54" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tYO-fR-CcJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CancelButtonAction:" target="xQg-Jp-I64" id="ICd-an-WS7"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2EY-o7-rBh">
+                                <rect key="frame" x="193" y="54" width="83" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yna-RI-xuB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="SubmitButtonAction:" target="xQg-Jp-I64" id="79U-5G-cB4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="CancelButtonOutlet" destination="1pg-Bv-uy4" id="YpI-ki-MPY"/>
+                        <outlet property="ComputingIDField" destination="KjM-Ww-1Lk" id="emh-bf-FYL"/>
+                        <outlet property="FirstNameField" destination="UHN-nb-qGE" id="6nm-rs-JSw"/>
+                        <outlet property="LastNameField" destination="c01-p2-Oag" id="T3N-22-qaH"/>
+                        <outlet property="SubmitButtonOutlet" destination="2EY-o7-rBh" id="fyv-VW-AWA"/>
+                    </connections>
+                </viewController>
+                <customObject id="Naa-R8-FGz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="670"/>
+        </scene>
         <!--Guest Checkin-->
         <scene sceneID="fmV-3M-BPY">
             <objects>

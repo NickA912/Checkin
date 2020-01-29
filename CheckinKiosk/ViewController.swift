@@ -35,7 +35,18 @@ class ViewController: NSViewController {
         timer=Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerAction), userInfo: nil, repeats:true)
         loginData+=event.characters!
         if (event.keyCode==36 && loginData.count==11) {
-            print("Logged In")
+            //print("Logged In")
+            if (dataHandler.checkUser(ID: String(loginData.dropLast()))==true) {
+                print("User Found")
+            }
+            else {
+                print("New user detected")
+                
+                if let UserCreation = self.storyboard?.instantiateController(withIdentifier: "UserCreation") as? UserCreation {
+                    self.view.window?.contentViewController = UserCreation
+                }
+                //dataHandler.addUser(fname: "Nick", lname: "Anselmo", ID: String(loginData.dropLast()), computeID: "nka6bv", guest: false)
+            }
         }
         return false
     }
