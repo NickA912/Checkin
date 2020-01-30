@@ -720,9 +720,21 @@
                                     <action selector="GuestCheckinButtonPress:" target="XfG-lQ-9wD" id="6ia-yz-wEI"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85G-vs-wT5">
+                                <rect key="frame" x="34" y="50" width="79" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Admin" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Kp-6J-CyU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="AdminButtonAction:" target="XfG-lQ-9wD" id="b32-Le-bq0"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="AdminButtonOutlet" destination="85G-vs-wT5" id="cEe-u5-PIk"/>
                         <outlet property="GuestCheckinButtonOutlet" destination="Wi9-cV-GdE" id="IhC-mv-meG"/>
                     </connections>
                 </viewController>
@@ -862,6 +874,143 @@ Gw
                 <customObject id="DWi-CF-hWW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="241"/>
+        </scene>
+        <!--AdminViewController-->
+        <scene sceneID="GUr-Mr-Bsj">
+            <objects>
+                <viewController title="AdminViewController" identifier="AdminViewController" storyboardIdentifier="AdminViewController" id="0j6-ol-rbO" customClass="AdminViewController" customModule="CheckinKiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Y5k-EO-TmA">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhZ-FU-JOB">
+                                <rect key="frame" x="20" y="258" width="70" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e52-BT-CEd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="BackButtonAction:" target="0j6-ol-rbO" id="A73-EE-Ckg"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zda-p8-fna">
+                                <rect key="frame" x="10" y="219" width="102" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Print Logs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yu3-1j-lLq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="printLogsAction:" target="0j6-ol-rbO" id="xq0-hl-prA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMj-fl-awc">
+                                <rect key="frame" x="10" y="186" width="107" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Print Users" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ICt-gT-pbL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="printUsersAction:" target="0j6-ol-rbO" id="bU5-SH-7Kr"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUB-Bi-mWu">
+                                <rect key="frame" x="10" y="153" width="125" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Edit Last User" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kvc-AD-ByA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editLastUserAction:" target="0j6-ol-rbO" id="5hg-cL-lq4"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-1O-Ptr">
+                                <rect key="frame" x="10" y="120" width="102" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Save Logs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fwz-uf-XQ7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveLogsAction:" target="0j6-ol-rbO" id="hcI-M6-1cb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyG-g3-q5o">
+                                <rect key="frame" x="10" y="87" width="108" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Save Users" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8T2-wW-VIU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveUsersAction:" target="0j6-ol-rbO" id="YYV-ON-9Bf"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-26-kiQ">
+                                <rect key="frame" x="10" y="54" width="105" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Clear Logs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b0n-gc-Wna">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearLogsAction:" target="0j6-ol-rbO" id="zTV-V8-W54"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J30-78-HkQ">
+                                <rect key="frame" x="10" y="21" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Clear Users" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2GX-eS-vMN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearUsersAction:" target="0j6-ol-rbO" id="0WO-ie-080"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nng-oO-cJN">
+                                <rect key="frame" x="158" y="186" width="109" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Load Users" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HiV-RA-sDV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loadUsersAction:" target="0j6-ol-rbO" id="GHn-Wh-RRw"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXu-EU-t9I">
+                                <rect key="frame" x="158" y="219" width="103" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Load Logs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JPp-IP-RHZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loadLogsAction:" target="0j6-ol-rbO" id="lxj-CK-0OY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="BackButtonOutlet" destination="uhZ-FU-JOB" id="wll-5x-UIe"/>
+                        <outlet property="clearLogs" destination="bHi-26-kiQ" id="JzH-GZ-QmR"/>
+                        <outlet property="clearUsers" destination="J30-78-HkQ" id="S1p-Nh-i8U"/>
+                        <outlet property="editLastUser" destination="VUB-Bi-mWu" id="nor-at-lrr"/>
+                        <outlet property="loadLogs" destination="qXu-EU-t9I" id="fDj-pH-GsB"/>
+                        <outlet property="loadUsers" destination="nng-oO-cJN" id="fxd-40-rR0"/>
+                        <outlet property="printLogs" destination="zda-p8-fna" id="6mZ-Xg-4lF"/>
+                        <outlet property="printUsers" destination="hMj-fl-awc" id="8gS-mb-92i"/>
+                        <outlet property="saveLogs" destination="6RR-1O-Ptr" id="GyO-Xy-Jht"/>
+                        <outlet property="saveUsers" destination="MyG-g3-q5o" id="ifJ-Tl-2w7"/>
+                    </connections>
+                </viewController>
+                <customObject id="q4X-xU-Wcn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="241"/>
         </scene>
     </scenes>
 </document>

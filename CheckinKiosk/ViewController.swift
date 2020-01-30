@@ -12,6 +12,8 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var GuestCheckinButtonOutlet: NSButton!
     
+    @IBOutlet weak var AdminButtonOutlet: NSButton!
+    
     var keyIsDown=false
     var loginData=""
     var timer=Timer()
@@ -35,17 +37,15 @@ class ViewController: NSViewController {
         timer=Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerAction), userInfo: nil, repeats:true)
         loginData+=event.characters!
         if (event.keyCode==36 && loginData.count==11) {
-            //print("Logged In")
+            dataHandler.addLog(ID: String(loginData.dropLast()))
             if (dataHandler.checkUser(ID: String(loginData.dropLast()))==true) {
-                print("User Found")
+                print("Thank you for checking in!")
             }
             else {
-                print("New user detected")
-                
+                print("New User")
                 if let UserCreation = self.storyboard?.instantiateController(withIdentifier: "UserCreation") as? UserCreation {
                     self.view.window?.contentViewController = UserCreation
                 }
-                //dataHandler.addUser(fname: "Nick", lname: "Anselmo", ID: String(loginData.dropLast()), computeID: "nka6bv", guest: false)
             }
         }
         return false
@@ -68,5 +68,10 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func AdminButtonAction(_ sender: Any) {
+        if let AdminViewController = self.storyboard?.instantiateController(withIdentifier: "AdminViewController") as? AdminViewController {
+            self.view.window?.contentViewController = AdminViewController
+        }
+    }
 }
 

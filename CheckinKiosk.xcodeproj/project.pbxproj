@@ -15,6 +15,7 @@
 		0D0D766E2375F331004FDC6C /* CheckinKioskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0D766D2375F331004FDC6C /* CheckinKioskUITests.swift */; };
 		0D1BE1F923DEA58C00F1B49F /* dataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BE1F823DEA58C00F1B49F /* dataHandler.swift */; };
 		0D1BE20023DF75E600F1B49F /* UserCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BE1FE23DF75E600F1B49F /* UserCreation.swift */; };
+		0DB520E923E2675800262BEE /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB520E823E2675800262BEE /* AdminViewController.swift */; };
 		0DB538AC23D4BDA5005E7DFC /* GuestCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB538AB23D4BDA5005E7DFC /* GuestCheckin.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		0D0D766F2375F331004FDC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1BE1F823DEA58C00F1B49F /* dataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataHandler.swift; sourceTree = "<group>"; };
 		0D1BE1FE23DF75E600F1B49F /* UserCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreation.swift; sourceTree = "<group>"; };
+		0DB520E823E2675800262BEE /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		0DB538AB23D4BDA5005E7DFC /* GuestCheckin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCheckin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				0DB538AB23D4BDA5005E7DFC /* GuestCheckin.swift */,
 				0D1BE1F823DEA58C00F1B49F /* dataHandler.swift */,
 				0D1BE1FE23DF75E600F1B49F /* UserCreation.swift */,
+				0DB520E823E2675800262BEE /* AdminViewController.swift */,
 			);
 			path = CheckinKiosk;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB520E923E2675800262BEE /* AdminViewController.swift in Sources */,
 				0D1BE1F923DEA58C00F1B49F /* dataHandler.swift in Sources */,
 				0DB538AC23D4BDA5005E7DFC /* GuestCheckin.swift in Sources */,
 				0D0D76522375F330004FDC6C /* ViewController.swift in Sources */,
