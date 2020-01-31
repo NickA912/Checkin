@@ -1012,5 +1012,18 @@ Gw
             </objects>
             <point key="canvasLocation" x="1072" y="241"/>
         </scene>
+        <!--CheckedInViewController-->
+        <scene sceneID="o8z-4P-WUj">
+            <objects>
+                <viewController title="CheckedInViewController" storyboardIdentifier="CheckedInViewController" id="3y9-ye-k0R" customClass="CheckedInViewController" customModule="CheckinKiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="OK6-86-GwC">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="wU6-9o-YcS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="670"/>
+        </scene>
     </scenes>
 </document>
