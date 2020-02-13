@@ -43,6 +43,7 @@ class ViewController: NSViewController {
             timer2.invalidate()
             timer2=Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer2Action), userInfo: nil, repeats:true)
             dataHandler.addLog(ID: String(loginData.dropLast()))
+            dataHandler.saveLogs()
             if (dataHandler.getLastLog() == "29420883602017") {
                 dataHandler.setAdmin()
             }
