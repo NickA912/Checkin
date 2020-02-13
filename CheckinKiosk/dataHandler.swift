@@ -24,6 +24,7 @@ class dataHandler {
     
     static var Users = [String: User]()
     static var Logs = [Log]()
+    static var adminLogin = false
     
     static func newUser(IDCode: String, firstName: String, lastName: String, computingID: String) {
         Users[IDCode]=User(firstName: firstName, lastName: lastName, computingID: computingID, isGuest: false)
@@ -104,13 +105,24 @@ class dataHandler {
     }
     
     static func clearLogs() {
-        Users.removeAll()
-    }
-    
-    static func clearUsers() {
         Logs.removeAll()
     }
     
+    static func clearUsers() {
+        Users.removeAll()
+    }
+    
+    static func isAdmin() -> Bool {
+        return adminLogin
+    }
+    
+    static func clearAdmin() {
+        adminLogin=false
+    }
+    
+    static func setAdmin() {
+        adminLogin=true
+    }
     
     // Debug methods
     static func addTestUsers() {
