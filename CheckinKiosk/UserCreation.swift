@@ -36,7 +36,7 @@ class UserCreation: NSViewController {
     
     @IBAction func SubmitButtonAction(_ sender: Any) {
         dataHandler.addUser(fname: FirstNameField.stringValue, lname: LastNameField.stringValue, ID: dataHandler.getLastLog(), computeID: ComputingIDField.stringValue, guest: false)
-        
+        dataHandler.saveUsers()
         if let ViewController = self.storyboard?.instantiateController(withIdentifier: "ViewController") as? ViewController {
             self.view.window?.contentViewController = ViewController
         }
