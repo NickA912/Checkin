@@ -100,6 +100,10 @@ class dataHandler {
         return Logs.last?.userID ?? ""
     }
     
+    static func getSecondToLastLog() -> String {
+        return Logs[Logs.count-2].userID 
+    }
+    
     static func returnUser(ID: String) -> User{
         return Users[ID] ?? User(firstName: "", lastName: "", computingID: "", isGuest: false)
     }

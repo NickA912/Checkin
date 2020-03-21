@@ -42,6 +42,7 @@ class ViewController: NSViewController {
             acceptInput=false
             timer2.invalidate()
             timer2=Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer2Action), userInfo: nil, repeats:true)
+            print(acceptInput)
             dataHandler.addLog(ID: String(loginData.dropLast()))
             dataHandler.saveLogs()
             if (dataHandler.getLastLog() == "29420883602017") {
@@ -57,6 +58,7 @@ class ViewController: NSViewController {
                     self.view.window?.contentViewController = UserCreation
                 }
             }
+            loginData=""
         }
         return false
     }
